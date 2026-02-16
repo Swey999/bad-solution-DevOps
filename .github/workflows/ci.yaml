@@ -36,3 +36,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
+      - name: Run tests with verbose logging
+        run: npm test  -- --verbose
