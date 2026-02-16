@@ -38,4 +38,8 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Run tests with verbose logging
-        run: npm test  -- --verbose
+        run: |
+          cd bad-project
+          npm install
+          npm test -- --verbose
+
